@@ -63,7 +63,7 @@ Questo è fondamentale per la diversificazione del portafoglio.
 
 
 
-##📜 Considerazioni 
+### 📜 Considerazioni 
 
 Al termine dell’analisi otteniamo i grafici dei rendimenti cumulati per ciascun titolo e una heatmap delle correlazioni tra asset, un quadro di insieme utile per valutare performance e diversificazione.
 
