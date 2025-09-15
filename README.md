@@ -19,7 +19,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 ```
-In questa fasi importiamo yfinance per dati finanziari storici direttamente da Yahoo Finance, per manipolazione ed elaborazione dati importo pandas e numpy mentre pe rla rappresentyazione e la vsualizzazione utilizziamo matplotlib e seasborn .
+In questa fasi importiamo yfinance per dati finanziari storici direttamente da Yahoo Finance, per manipolazione ed elaborazione dati importiamo pandas e numpy mentre per la rappresentazione e la vsualizzazione utilizziamo matplotlib e seasborn.
 
 
 
@@ -35,7 +35,7 @@ data = yf.download(tickers, start="YYYY-MM-DD", end="YYYY-MM-DD")["Adj Close"]
 
 ### 3️⃣ Calcolo dei rendimenti
 
-I rendimenti giornalieri si ottengono come variazione percentuale dei prezzi e Rimuoviamo i valori mancanti con .dropna().
+I rendimenti giornalieri si ottengono come variazione percentuale dei prezzi e rimuoviamo i valori mancanti con .dropna().
 
 
 
@@ -57,7 +57,7 @@ sns.heatmap(returns.corr(), annot=True, cmap="coolwarm")
 
 ```
 
-Creiamo una matrice di correlazione dei rendimenti, usiamo una heatmap per evidenziare i legami tra i vari titoli, che indicherà il rischio effettivo , considerate le corelazioni nascoste.
+Creiamo una matrice di correlazione dei rendimenti, usiamo una heatmap per evidenziare i legami tra i vari titoli, che indicherà il rischio effettivo, considerate le correlazioni nascoste.
 Le correlazioni ci dicono se due asset tendono a muoversi insieme (correlazione positiva) o in direzioni opposte (correlazione negativa).
 Questo è fondamentale per la diversificazione del portafoglio.
 
@@ -66,6 +66,15 @@ Questo è fondamentale per la diversificazione del portafoglio.
 ##📜 Considerazioni 
 
 Al termine dell’analisi otteniamo i grafici dei rendimenti cumulati per ciascun titolo e una heatmap delle correlazioni tra asset, un quadro di insieme utile per valutare performance e diversificazione.
+
+
+
+## 📊 Interpretazione dei risultati 
+
+Dal grafico cumulativo dei returns tra il 2018 e il 2023 si nota che TSLA mostra l'andamento più
+estremo con picchi molto alti e cadute altrettanto forti, riflettendo in una volatilità maggiore rispetto agli altri tioli presi in considerazione.
+AAPL e MSFT seguono traiettorie simili, come è possobile notare dalla heatmap sono abbastanza fortemente correlate (0.75).
+AMZN e GOOG  mostrano andamenti più contenuti  e in linea con AAPL e MSFT , con rendimenti comulativi leggermente piu bassi. 
 
 
 
